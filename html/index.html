@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Directivas</title>
+</head>
+<body>
+    <section id="seccion">
+        <p class="text">{{ lorem }}</p>
+        <input type="text" id="iptText">
+        <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+        <div>
+            <div>
+                <p class="numero">{{width}}</p>
+                <button @Click="Subir" class="btn" id="btnS">+</button>
+                <button @Click="Bajar" class="btn" id="btnB">-</button>
+            </div>
+
+            <div class="loader">
+                <div class="loader2" v-bind:style="'width: ' + [width] + '%'"></div>
+            </div>
+        </div>
+        <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+        <div v-for="tarea in tareas">
+            <p v-bind:class="[tarea.classCompletado]">{{tarea.tarea}} - <label @click="CambiarEstado(tarea)">{{ tarea.mensaje }}</label></p>
+        </div>
+        <p class="numero">Tareas Completadas: {{completados}}</p>
+    </section>
+    
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

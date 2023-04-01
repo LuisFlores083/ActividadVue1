@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    text-align: center;
+}
+
+#seccion{
+    margin: 10px 50px;
+    background-color: lightcoral;
+}
+
+.loader {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 40px;
+  }
+
+  .loader2{
+    background-color: cyan;
+    height: 100%;
+    border-radius: 40px;
+  }
+
+  .incompletado{
+    text-decoration-line: none;
+  }
+
+  .completado{
+    text-decoration-line: line-through;
+  }
+
+  .numero{
+    font-size: 2rem;
+  }
+
+  .btn{
+    padding: 20px;
+  }
+  #btnS{
+    background-color: greenyellow;
+  }
+  #btnB{
+    background-color: red;
+  }
+
+  
